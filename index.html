@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Instituto | Inicio</title>
+  <link rel="stylesheet" href="./Style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true"></div>
+        <div>
+          <div class="brand-name">Instituto Educativo</div>
+          <div class="brand-tag">Formación con valores</div>
+        </div>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="siteNav">
+        <span class="nav-toggle-lines" aria-hidden="true"></span>
+      </button>
+
+      <nav class="site-nav" id="siteNav" aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a class="nav-link active" href="./index.html" data-route="inicio">Inicio</a></li>
+          <li><a class="nav-link" href="./pages/mision.html" data-route="mision">Misión</a></li>
+          <li><a class="nav-link" href="./pages/vision.html" data-route="vision">Visión</a></li>
+          <li><a class="nav-link" href="./pages/servicios.html" data-route="servicios">Servicios</a></li>
+          <li><a class="nav-link" href="./pages/contacto.html" data-route="contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido" class="site-main">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Educación institucional</p>
+          <h1 class="hero-title"> Bienvenidos
+            <span class="accent">al cecyte</span> EMSad 35</h1>
+          <p class="hero-subtitle">
+            Aquí encontrarás nuestra misión, visión, servicios y una forma clara de contactarnos.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="./pages/servicios.html">Ver servicios</a>
+            <a class="btn btn-ghost" href="./pages/contacto.html">Contáctanos</a>
+          </div>
+
+          <div class="hero-stats" aria-label="Datos destacados">
+            <div class="stat card">
+              <div class="stat-value" data-count="25">0</div>
+              <div class="stat-label">Años de trayectoria</div>
+            </div>
+            <div class="stat card">
+              <div class="stat-value" data-count="12">0</div>
+              <div class="stat-label">Programas académicos</div>
+            </div>
+            <div class="stat card">
+              <div class="stat-value" data-count="1200">0</div>
+              <div class="stat-label">Estudiantes</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="blob blob-1"></div>
+          <div class="blob blob-2"></div>
+          <div class="blob blob-3"></div>
+          <div class="glass panel">
+            <div class="panel-title">Valores</div>
+            <ul class="value-list">
+              <li>Respeto</li>
+              <li>Responsabilidad</li>
+              <li>Excelencia</li>
+              <li>Inclusión</li>
+            </ul>
+            <div class="panel-foot">Instituto Educativo 2026</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Información organizada</h2>
+          <p class="section-subtitle">Estructura limpia y navegación consistente en todas las páginas.</p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="info-card card reveal">
+            <h3>Misión</h3>
+            <p>Guiamos el aprendizaje con enfoque humano y metas claras.</p>
+            <a class="text-link" href="./pages/mision.html">Leer misión →</a>
+          </article>
+          <article class="info-card card reveal">
+            <h3>Visión</h3>
+            <p>Formamos para un futuro responsable, creativo y comprometido.</p>
+            <a class="text-link" href="./pages/vision.html">Leer visión →</a>
+          </article>
+          <article class="info-card card reveal">
+            <h3>Servicios</h3>
+            <p>Oferta académica, orientación y actividades institucionales.</p>
+            <a class="text-link" href="./pages/servicios.html">Ver servicios →</a>
+          </article>
+          <article class="info-card card reveal">
+            <h3>Contacto</h3>
+            <p>Canales rápidos para comunicarnos y responder tus dudas.</p>
+            <a class="text-link" href="./pages/contacto.html">Ir a contacto →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="brand-mark small" aria-hidden="true"></div>
+        <div>
+          <div class="footer-title">Instituto Educativo</div>
+          <div class="footer-sub">Educación con valores</div>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <a href="./index.html">Inicio</a>
+        <a href="./pages/mision.html">Misión</a>
+        <a href="./pages/vision.html">Visión</a>
+        <a href="./pages/servicios.html">Servicios</a>
+        <a href="./pages/contacto.html">Contacto</a>
+      </div>
+
+      <div class="footer-meta">
+        <div>© <span id="year"></span> Instituto Educativo. Todos los derechos reservados.</div>
+        <div class="muted">Hecho con diseño pastel + animaciones suaves.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./Script.js"></script>
+</body>
+</html>
+

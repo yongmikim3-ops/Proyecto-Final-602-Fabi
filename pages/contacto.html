@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Instituto | Contacto</title>
+  <link rel="stylesheet" href="../Style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true"></div>
+        <div>
+          <div class="brand-name">Instituto Educativo</div>
+          <div class="brand-tag">Formación con valores</div>
+        </div>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="siteNav">
+        <span class="nav-toggle-lines" aria-hidden="true"></span>
+      </button>
+
+      <nav class="site-nav" id="siteNav" aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="../index.html" data-route="inicio">Inicio</a></li>
+          <li><a class="nav-link" href="./mision.html" data-route="mision">Misión</a></li>
+          <li><a class="nav-link" href="./vision.html" data-route="vision">Visión</a></li>
+          <li><a class="nav-link" href="./servicios.html" data-route="servicios">Servicios</a></li>
+          <li><a class="nav-link active" href="./contacto.html" data-route="contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido" class="site-main">
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero-card card reveal">
+          <h1>Contacto</h1>
+          <p>
+            Completa el formulario y envíanos tu mensaje. También puedes usar nuestros canales de atención.
+          </p>
+          <div class="pill-row" aria-label="Canales">
+            <span class="pill">Correo</span>
+            <span class="pill">Teléfono</span>
+            <span class="pill">Redes</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="contact-grid">
+          <form class="contact-card card reveal" id="contactForm">
+            <div class="form-row">
+              <label for="nombre">Nombre</label>
+              <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required />
+            </div>
+            <div class="form-row">
+              <label for="correo">Correo</label>
+              <input id="correo" name="correo" type="email" placeholder="tucorreo@ejemplo.com" required />
+            </div>
+            <div class="form-row">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje" required></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">Enviar mensaje</button>
+            <p class="form-note muted" id="formNote" aria-live="polite"></p>
+          </form>
+
+          <aside class="contact-aside card reveal">
+            <h3>Datos</h3>
+            <div class="aside-item">
+              <div class="aside-label">Correo</div>
+              <div class="aside-value">instituto@ejemplo.com</div>
+            </div>
+            <div class="aside-item">
+              <div class="aside-label">Teléfono</div>
+              <div class="aside-value">+52 000 000 0000</div>
+            </div>
+            <div class="aside-item">
+              <div class="aside-label">Dirección</div>
+              <div class="aside-value">Av. Siempre Viva 123, Ciudad</div>
+            </div>
+            <div class="aside-divider"></div>
+            <div class="aside-callout">
+              <div class="aside-callout-title">Horario</div>
+              <div class="muted">Lun a Vie · 8:00 - 16:00</div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="brand-mark small" aria-hidden="true"></div>
+        <div>
+          <div class="footer-title">Instituto Educativo</div>
+          <div class="footer-sub">Educación con valores</div>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <a href="../index.html">Inicio</a>
+        <a href="./mision.html">Misión</a>
+        <a href="./vision.html">Visión</a>
+        <a href="./servicios.html">Servicios</a>
+        <a href="./contacto.html">Contacto</a>
+      </div>
+
+      <div class="footer-meta">
+        <div>© <span id="year"></span> Instituto Educativo. Todos los derechos reservados.</div>
+        <div class="muted">Hecho con diseño pastel + animaciones suaves.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../Script.js"></script>
+</body>
+</html>
+
