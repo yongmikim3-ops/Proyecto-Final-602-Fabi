@@ -69,7 +69,9 @@
       if (r === 'mision') return path.endsWith('mision.html');
       if (r === 'vision') return path.endsWith('vision.html');
       if (r === 'servicios') return path.endsWith('servicios.html');
+      if (r === 'proyectos') return path.endsWith('proyectos.html');
       if (r === 'contacto') return path.endsWith('contacto.html');
+
       return false;
     });
     if (!active && byData) byData.classList.add('active');
