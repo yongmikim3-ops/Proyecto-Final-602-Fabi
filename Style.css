@@ -1,19 +1,20 @@
 :root{
-  --bg: #fbfbff;
-  --card: rgba(255,255,255,.72);
-  --text: #2f2f3a;
-  --muted: rgba(47,47,58,.65);
+  --bg: #fff7ff;
+  --card: rgba(255,255,255,.78);
+  --text: #2a2238;
+  --muted: rgba(42,34,56,.62);
 
-  /* pasteles */
-  --p1:#d7f5f0; /* menta claro */
-  --p2:#e7dcff; /* lavanda */
-  --p3:#ffe4f3; /* rosa */
-  --p4:#fff1d6; /* durazno/crema */
-  --p5:#d9e7ff; /* celeste */
+  /* pasteles (rosa/morado/azul) */
+  --p1:#d6f0ff; /* azul cielo */
+  --p2:#e6dbff; /* lavanda */
+  --p3:#ffe0f4; /* rosa */
+  --p4:#fff0fb; /* rosa crema */
+  --p5:#cfe2ff; /* azul claro */
 
-  --primary:#6b7cff;
-  --primary-2:#8d6bff;
-  --ring: rgba(107,124,255,.35);
+  --primary:#7b5cff; /* morado */
+  --primary-2:#ff5cc8; /* rosa */
+  --ring: rgba(123,92,255,.28);
+
 
   --shadow: 0 16px 40px rgba(35, 43, 78, .12);
   --shadow-soft: 0 10px 30px rgba(35, 43, 78, .10);
@@ -31,17 +32,17 @@ body{
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue";
   color: var(--text);
 
-  /* Fondo pastel animado (rosa/azul/morados) */
+  /* Fondo pastel base (sin blanco aburrido) */
   background:
-    radial-gradient(900px 520px at 20% 10%, rgba(255,228,243,.65) 0%, rgba(255,255,255,0) 55%),
-    radial-gradient(900px 520px at 85% 0%, rgba(231,220,255,.62) 0%, rgba(255,255,255,0) 55%),
-    radial-gradient(800px 460px at 70% 95%, rgba(215,245,240,.58) 0%, rgba(255,255,255,0) 55%),
-    var(--bg);
+    radial-gradient(900px 520px at 15% 0%, rgba(255,224,244,.75) 0%, rgba(255,255,255,0) 55%),
+    radial-gradient(900px 520px at 85% 10%, rgba(230,219,255,.75) 0%, rgba(255,255,255,0) 55%),
+    radial-gradient(850px 500px at 60% 95%, rgba(207,226,255,.65) 0%, rgba(255,255,255,0) 55%),
+    linear-gradient(180deg, rgba(255,247,255,.95) 0%, rgba(255,247,255,.75) 60%, rgba(255,247,255,.92) 100%);
 
   min-height:100vh;
   background-attachment: fixed;
-  animation: bgDrift 16s ease-in-out infinite alternate;
 }
+
 
 @keyframes bgDrift{
   0%{
@@ -61,53 +62,91 @@ body{
   pointer-events: none;
   z-index: -1;
 }
+
+/* Fondo animado con ondas */
+.waves-bg{
+  background:
+    radial-gradient(900px 520px at 20% 10%, rgba(255,224,244,.85) 0%, transparent 55%),
+    radial-gradient(900px 560px at 80% 20%, rgba(230,219,255,.80) 0%, transparent 55%),
+    radial-gradient(800px 560px at 60% 90%, rgba(207,226,255,.70) 0%, transparent 55%),
+    linear-gradient(180deg, rgba(255,247,255,.65) 0%, rgba(255,255,255,.92) 100%);
+}
+
 .waves-layer{
   position: absolute;
   left: -10%;
   right: -10%;
   height: 55vh;
   bottom: -20vh;
-  /* más visible para que se vean brillitos */
-  opacity: 0.55;
+  opacity: 0.95;
   background-repeat: repeat-x;
-  background-size: 1200px 280px;
-  filter: saturate(1.06) brightness(1.05);
-  mix-blend-mode: normal;
+  background-size: 1400px 320px;
+  filter: saturate(1.05) brightness(1.05);
 }
 
-
-/* línea/contorno brillante */
+/* Brillos/contorno */
 .waves-layer::before{
   content:"";
   position:absolute;
   inset: 0;
+  /* Solo crestas horizontales (nada de círculos) */
   background:
-    radial-gradient(circle at 20% 50%, rgba(255,255,255,.65) 0 2px, transparent 3px),
-    radial-gradient(circle at 50% 50%, rgba(255,255,255,.55) 0 2px, transparent 3px),
-    radial-gradient(circle at 80% 50%, rgba(255,255,255,.45) 0 2px, transparent 3px);
-  opacity: .55;
-  filter: blur(1px);
+    repeating-linear-gradient(
+      180deg,
+      transparent 0px,
+      rgba(255,255,255,.55) 2px,
+      transparent 6px
+    );
+  opacity: .65;
+  filter: blur(0.4px);
 }
 
+
+/* Intensificar el brillo del oleaje */
+.waves-1{ filter: drop-shadow(0 0 10px rgba(255,228,243,.35)); }
+.waves-2{ filter: drop-shadow(0 0 14px rgba(231,220,255,.30)); }
+
+
 .waves-1{
+  opacity: 1;
   background-image:
-    linear-gradient(transparent 0 58%, rgba(255,228,243,.28) 58% 60%, transparent 60%),
-    repeating-radial-gradient(circle at 50% 65%, rgba(255,228,243,.25) 0 2px, transparent 3px 28px);
-  animation: waveMove1 12s ease-in-out infinite;
+    /* “~~~” más marcado: líneas horizontales tipo cresta */
+    repeating-linear-gradient(
+      180deg,
+      transparent 0px,
+      rgba(255,228,243,.42) 1px,
+      transparent 2px,
+      transparent 10px
+    ),
+    /* brillo extra en la zona de cresta */
+    linear-gradient(transparent 0 56%, rgba(255,228,243,.45) 56% 60%, transparent 60%);
+
+  animation: waveMove1 9s ease-in-out infinite;
 }
+
+
 .waves-2{
-  opacity: 0.25;
+  opacity: 0.55;
   background-image:
-    linear-gradient(transparent 0 60%, rgba(231,220,255,.30) 60% 62%, transparent 62%),
-    repeating-radial-gradient(circle at 40% 70%, rgba(231,220,255,.22) 0 2px, transparent 3px 30px);
-  animation: waveMove2 16s ease-in-out infinite;
+    linear-gradient(transparent 0 60%, rgba(231,220,255,.28) 60% 62.5%, transparent 62.5%),
+    /* crestas horizontales (~~~) sin círculos */
+    repeating-linear-gradient(
+      180deg,
+      transparent 0px,
+      rgba(231,220,255,.26) 1px,
+      transparent 2px,
+      transparent 12px
+    );
+  animation: waveMove2 18s ease-in-out infinite;
 }
+
 
 @keyframes waveMove1{
   0%{ transform: translateX(0) translateY(0); }
   50%{ transform: translateX(-3%) translateY(-10px); }
   100%{ transform: translateX(0) translateY(0); }
 }
+
 @keyframes waveMove2{
   0%{ transform: translateX(0) translateY(0); }
   50%{ transform: translateX(3%) translateY(-14px); }
@@ -116,8 +155,9 @@ body{
 
 @media (prefers-reduced-motion: reduce){
   .waves-layer{ animation: none !important; }
-  body{ animation: none !important; }
 }
+
+
 
 
 
@@ -299,12 +339,13 @@ body{
 }
 .btn:focus{ outline: 3px solid var(--ring); outline-offset: 2px; }
 .btn-primary{
-  background: linear-gradient(135deg, rgba(107,124,255,.95), rgba(141,107,255,.88));
+  background: linear-gradient(135deg, rgba(123,92,255,.95), rgba(255,92,200,.88));
   color: #fff;
-  border-color: rgba(107,124,255,.35);
-  box-shadow: 0 14px 30px rgba(107,124,255,.20);
+  border-color: rgba(123,92,255,.35);
+  box-shadow: 0 14px 30px rgba(123,92,255,.22);
 }
-.btn-primary:hover{ transform: translateY(-2px); box-shadow: 0 18px 44px rgba(107,124,255,.25); }
+.btn-primary:hover{ transform: translateY(-2px); box-shadow: 0 18px 44px rgba(255,92,200,.25); }
+
 
 .btn-ghost{
   background: rgba(255,255,255,.6);
@@ -404,6 +445,42 @@ body{
 
 .reveal{ opacity: 0; transform: translateY(6px); }
 .reveal.is-visible{ opacity: 1; transform: translateY(0); transition: opacity .35s ease, transform .35s ease; }
+
+/* Estrellitas por interacción */
+.star-pop{
+  position: fixed;
+  z-index: 9999;
+  pointer-events: none;
+  left: 0;
+  top: 0;
+  border-radius: 999px;
+  background: hsla(var(--star-hue, 300), 95%, 78%, .95);
+  box-shadow: 0 0 12px hsla(var(--star-hue, 300), 95%, 70%, .55);
+  transform: translate(-50%, -50%) scale(.9);
+  animation: starPop .85s ease-out forwards;
+}
+
+@keyframes starPop{
+  0%{ opacity: 0; transform: translate(-50%, -50%) scale(.6) rotate(0deg); }
+  15%{ opacity: 1; }
+  100%{ opacity: 0; transform: translate(-50%, -90%) scale(1.35) rotate(25deg); }
+}
+
+
+
+
+.star-btn{
+  position: relative;
+  animation: btnGlow .65s ease-out 1;
+}
+
+@keyframes btnGlow{
+  0%{ box-shadow: 0 0 0 rgba(255,255,255,0); }
+  40%{ box-shadow: 0 0 0 4px rgba(123,92,255,.14); }
+  100%{ box-shadow: 0 0 0 rgba(255,255,255,0); }
+}
+
+
 
 
 
