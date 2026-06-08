@@ -9,6 +9,9 @@
   // Mobile nav toggle
   const toggleBtn = $('#navToggle');
   const nav = $('#siteNav');
+
+
+
   if (toggleBtn && nav) {
     const setExpanded = (val) => toggleBtn.setAttribute('aria-expanded', String(val));
 
@@ -70,7 +73,9 @@
       if (r === 'vision') return path.endsWith('vision.html');
       if (r === 'servicios') return path.endsWith('servicios.html');
       if (r === 'proyectos') return path.endsWith('proyectos.html');
+      if (r === 'personal') return path.endsWith('personal.html');
       if (r === 'contacto') return path.endsWith('contacto.html');
+
 
       return false;
     });
