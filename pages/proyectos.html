@@ -12,9 +12,7 @@
     <div class="waves-layer waves-2" style="opacity:1"></div>
   </div>
 
-
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
-
 
   <header class="site-header">
     <div class="container header-inner">
@@ -26,9 +24,7 @@
         </div>
       </div>
 
-
       <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="siteNav">
-
         <span class="nav-toggle-lines" aria-hidden="true"></span>
       </button>
 
@@ -49,10 +45,10 @@
     <section class="page-hero">
       <div class="container">
         <div class="page-hero-card card reveal">
-          <h1>Proyectos PEC</h1>
+          <h1 class="glow-title">Proyectos PEC</h1>
           <p>
             Actividades, impacto, objetivos y eventos destacados organizados por proyecto.
-            Al pasar el mouse, las tarjetas se mueven suavemente.
+            Organizado en borbujas para que no se vea todo amontonado.
           </p>
           <div class="pill-row" aria-label="Ejes de trabajo">
             <span class="pill">Medio ambiente</span>
@@ -67,14 +63,16 @@
       <div class="container">
         <div class="pec-grid">
           <!-- Proyecto 1: Trueque -->
-          <article class="pec-project info-card card reveal">
+          <article class="pec-project info-card card reveal" data-project>
             <header class="pec-project-head">
-              <h3>Proyecto 1: Trueque</h3>
-              <span class="pec-badge">Cultura y comunidad</span>
+              <div class="pec-project-title-row">
+                <h3 class="pec-project-title">Proyecto 1: Trueque</h3>
+                <span class="pec-badge">Cultura y comunidad</span>
+              </div>
             </header>
 
-            <div class="pec-row">
-              <div class="pec-box">
+            <div class="pec-bubbles">
+              <div class="pec-bubble">
                 <div class="pec-box-title">ACTIVIDADES</div>
                 <ul class="pec-list">
                   <li>Rescate cultural: investigación y difusión (siglo XVIII).</li>
@@ -83,7 +81,7 @@
                 </ul>
               </div>
 
-              <div class="pec-box">
+              <div class="pec-bubble pec-bubble-accent">
                 <div class="pec-box-title">IMPACTO</div>
                 <ul class="pec-list">
                   <li>Integración comunitaria: cohesión social.</li>
@@ -91,7 +89,7 @@
                 </ul>
               </div>
 
-              <div class="pec-box">
+              <div class="pec-bubble">
                 <div class="pec-box-title">OBJETIVO</div>
                 <ul class="pec-list">
                   <li>Rescatar la práctica tradicional del trueque desde la comunidad.</li>
@@ -100,7 +98,7 @@
                 </ul>
               </div>
 
-              <div class="pec-box pec-box-highlight">
+              <div class="pec-bubble pec-bubble-highlight">
                 <div class="pec-box-title">EVENTOS DESTACADOS</div>
                 <ul class="pec-list">
                   <li>Feria del Trueque: intercambio de productos locales sin dinero.</li>
@@ -110,14 +108,16 @@
           </article>
 
           <!-- Proyecto 2: Mujer, Salud y Equidad -->
-          <article class="pec-project info-card card reveal">
+          <article class="pec-project info-card card reveal" data-project>
             <header class="pec-project-head">
-              <h3>Proyecto 2: Mujer, Salud y Equidad</h3>
-              <span class="pec-badge">Salud y equidad</span>
+              <div class="pec-project-title-row">
+                <h3 class="pec-project-title">Proyecto 2: Mujer, Salud y Equidad</h3>
+                <span class="pec-badge pec-badge-pink">Salud y equidad</span>
+              </div>
             </header>
 
-            <div class="pec-row">
-              <div class="pec-box">
+            <div class="pec-bubbles">
+              <div class="pec-bubble">
                 <div class="pec-box-title">ACTIVIDADES</div>
                 <ul class="pec-list">
                   <li>Talleres formativos.</li>
@@ -126,7 +126,7 @@
                 </ul>
               </div>
 
-              <div class="pec-box">
+              <div class="pec-bubble pec-bubble-accent">
                 <div class="pec-box-title">IMPACTO</div>
                 <ul class="pec-list">
                   <li>Distribuido en al menos 10 comunidades cercanas.</li>
@@ -134,7 +134,7 @@
                 </ul>
               </div>
 
-              <div class="pec-box">
+              <div class="pec-bubble">
                 <div class="pec-box-title">OBJETIVO</div>
                 <ul class="pec-list">
                   <li>Reconocer el papel de la mujer en la comunidad.</li>
@@ -142,7 +142,7 @@
                 </ul>
               </div>
 
-              <div class="pec-box pec-box-highlight">
+              <div class="pec-bubble pec-bubble-highlight">
                 <div class="pec-box-title">EVENTO DESTACADO</div>
                 <ul class="pec-list">
                   <li>Segunda edición de la Carrera por la Salud de la Mujer (más de 300 participantes).</li>
@@ -151,15 +151,17 @@
             </div>
           </article>
 
-          <!-- Proyecto 3: huellas:cuidado animal y salud comunitaria -->
-          <article class="pec-project info-card card reveal">
+          <!-- Proyecto 3: huellas — Cuidado animal y salud comunitaria -->
+          <article class="pec-project info-card card reveal" data-project>
             <header class="pec-project-head">
-              <h3>Proyecto 3: huellas — Cuidado animal y salud comunitaria</h3>
-              <span class="pec-badge">Vida y comunidad</span>
+              <div class="pec-project-title-row">
+                <h3 class="pec-project-title">Proyecto 3: huellas — Cuidado animal y salud comunitaria</h3>
+                <span class="pec-badge">Vida y comunidad</span>
+              </div>
             </header>
 
-            <div class="pec-row">
-              <div class="pec-box">
+            <div class="pec-bubbles">
+              <div class="pec-bubble">
                 <div class="pec-box-title">ACTIVIDADES</div>
                 <ul class="pec-list">
                   <li><strong>Carrera comunitaria:</strong> 8:00 a 10:00 a.m.</li>
@@ -171,7 +173,7 @@
                 </ul>
               </div>
 
-              <div class="pec-box">
+              <div class="pec-bubble pec-bubble-accent">
                 <div class="pec-box-title">IMPACTO</div>
                 <ul class="pec-list">
                   <li>Cuidado animal: empatía y prácticas responsables.</li>
@@ -179,7 +181,7 @@
                 </ul>
               </div>
 
-              <div class="pec-box">
+              <div class="pec-bubble">
                 <div class="pec-box-title">OBJETIVO</div>
                 <ul class="pec-list">
                   <li>Promover el cuidado animal y la responsabilidad.</li>
@@ -188,7 +190,7 @@
                 </ul>
               </div>
 
-              <div class="pec-box pec-box-highlight">
+              <div class="pec-bubble pec-bubble-highlight">
                 <div class="pec-box-title">EVENTOS DESTACADOS</div>
                 <ul class="pec-list">
                   <li>Carrera comunitaria (8:00 – 10:00 a.m.)</li>
