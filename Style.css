@@ -1,5 +1,5 @@
 :root{
-  --bg: #fff7ff;
+  --bg: #05005e;
   --card: rgba(255,255,255,.78);
   --text: #2a2238;
   --muted: rgba(42,34,56,.62);
@@ -8,15 +8,17 @@
 
 
   /* pasteles (rosa/morado/azul) */
-  --p1:#d6f0ff; /* azul cielo */
-  --p2:#e6dbff; /* lavanda */
-  --p3:#ffe0f4; /* rosa */
-  --p4:#fff0fb; /* rosa crema */
-  --p5:#cfe2ff; /* azul claro */
+  --p1:#0c570df9; /* azul cielo */
+  --p2:#19a400; /* lavanda */
+  --p3:#217c00; /* rosa */
+  --p4:#b47b1f; /* rosa crema */
+  --p5:#e68210b0; /* azul claro */
 
-  --primary:#7b5cff; /* morado */
-  --primary-2:#ff5cc8; /* rosa */
-  --ring: rgba(123,92,255,.28);
+  /* Institucional: azul mejor (sin morado) */
+  --primary:#097909; /* azul institucional */
+  --primary-2:#e78300bb; /* azul profundo */
+  --ring: rgba(14, 233, 69, 0.28);
+
 
 
   --shadow: 0 16px 40px rgba(35, 43, 78, .12);
@@ -37,18 +39,15 @@ body{
 
   /* Fondo pastel base (sin blanco aburrido) */
   background:
-    radial-gradient(900px 520px at 15% 0%, rgba(237, 118, 195, 0.75) 0%, rgba(255,255,255,0) 55%),
-    radial-gradient(900px 520px at 85% 10%, rgba(128, 98, 199, 0.75) 0%, rgba(255,255,255,0) 55%),
-    radial-gradient(850px 500px at 60% 95%, rgba(118, 168, 242, 0.65) 0%, rgba(255,255,255,0) 55%),
+    radial-gradient(900px 520px at 15% 0%, hsla(30, 95%, 30%, 0.622) 0%, rgba(255, 255, 255, 0) 55%),
+    radial-gradient(900px 520px at 85% 10%, rgb(133, 89, 0) 0%, rgba(255,255,255,0) 55%),
+    radial-gradient(850px 500px at 60% 95%, rgba(60, 201, 0, 0.4) 0%, rgba(255,255,255,0) 55%),
+
     linear-gradient(180deg, rgba(255,247,255,.95) 0%, rgba(255,247,255,.75) 60%, rgba(255,247,255,.92) 100%);
 
   min-height:100vh;
   background-attachment: fixed;
 }
-
-
-
-
 
 @keyframes bgDrift{
   0%{
@@ -61,34 +60,8 @@ body{
   }
 }
 
-/* Ondas suaves detrás del contenido */
-.waves-bg{
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: -1;
-}
 
-/* Fondo animado con ondas */
-.waves-bg{
-  background:
-    radial-gradient(900px 520px at 20% 10%, rgba(255,224,244,.85) 0%, transparent 55%),
-    radial-gradient(900px 560px at 80% 20%, rgba(230,219,255,.80) 0%, transparent 55%),
-    radial-gradient(800px 560px at 60% 90%, rgba(207,226,255,.70) 0%, transparent 55%),
-    linear-gradient(180deg, rgba(255,247,255,.65) 0%, rgba(255,255,255,.92) 100%);
-}
 
-.waves-layer{
-  position: absolute;
-  left: -10%;
-  right: -10%;
-  height: 55vh;
-  bottom: -20vh;
-  opacity: 0.95;
-  background-repeat: repeat-x;
-  background-size: 1400px 320px;
-  filter: saturate(1.05) brightness(1.05);
-}
 
 /* Brillos/contorno */
 .waves-layer::before{
@@ -100,7 +73,7 @@ body{
     repeating-linear-gradient(
       180deg,
       transparent 0px,
-      rgba(213, 171, 220, 0.55) 2px,
+      rgba(70, 3, 255, 0.55) 2px,
       transparent 6px
     );
   opacity: .65;
@@ -195,8 +168,8 @@ body{
   top: 0;
   z-index: 50;
   backdrop-filter: blur(0px);
-  background: rgba(251,251,255,.78);
-  border-bottom: 1px solid rgba(47,47,58,.06);
+  background: rgba(7, 109, 45, 0.923);
+  border-bottom: 1px solid rgba(227, 121, 0, 0.774);
 }
 
 .header-inner{
@@ -212,7 +185,7 @@ body{
   width: 36px; height: 36px;
   border-radius: 14px;
   background:
-    linear-gradient(135deg, rgba(107,124,255,.25), rgba(141,107,255,.25)),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(141,107,255,.25)),
     radial-gradient(circle at 30% 30%, var(--p3), transparent 58%),
     radial-gradient(circle at 70% 70%, var(--p1), transparent 58%),
     rgba(255,255,255,.6);
@@ -255,18 +228,18 @@ body{
 }
 .nav-link:hover{
   transform: translateY(-1px);
-  background: rgba(255,255,255,.6);
-  border-color: rgba(107,124,255,.22);
+  background: rgb(237, 112, 10);
+  border-color: rgba(236, 134, 0, 0.84);
 }
 .nav-link.active{
-  background: linear-gradient(135deg, rgba(107,124,255,.18), rgba(141,107,255,.12));
+  background: linear-gradient(135deg, rgba(18, 189, 69, 0.982), rgba(141,107,255,.12));
   border-color: rgba(107,124,255,.28);
 }
 
 .nav-toggle{
   display:none;
   border: 1px solid rgba(47,47,58,.10);
-  background: rgba(255,255,255,.55);
+  background: rgb(255, 255, 255);
   border-radius: 14px;
   width: 44px;
   height: 44px;
@@ -318,7 +291,7 @@ body{
 .eyebrow{
   margin:0 0 10px;
   font-weight: 750;
-  color: rgba(47,47,58,.65);
+  color: rgb(47, 47, 58);
 }
 .hero-title{
   margin:0;
@@ -355,7 +328,7 @@ body{
 }
 .btn:focus{ outline: 3px solid var(--ring); outline-offset: 2px; }
 .btn-primary{
-  background: linear-gradient(135deg, rgba(123,92,255,.95), rgba(255,92,200,.88));
+  background: linear-gradient(135deg, rgba(40, 199, 8, 0.95), rgba(13, 22, 131, 0.88));
   color: #fff;
   border-color: rgba(123,92,255,.35);
   box-shadow: 0 14px 30px rgba(123,92,255,.22);
@@ -711,7 +684,8 @@ input:focus, textarea:focus{ border-color: rgba(107,124,255,.35); box-shadow: 0 
 
 /* Proyectos PEC */
 .glow-title{
-  background: linear-gradient(90deg, #6f4dff, #b34dff, #ff4cc8);
+  background: linear-gradient(90deg, #2dd4bf, #60a5fa, #1e90ff);
+
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -749,8 +723,9 @@ input:focus, textarea:focus{ border-color: rgba(107,124,255,.35); box-shadow: 0 
 .pec-badge{
   padding: 8px 12px;
   border-radius: 999px;
-  background: linear-gradient(135deg, rgba(123,92,255,.18), rgba(141,107,255,.12));
-  border: 1px solid rgba(107,124,255,.22);
+  background: linear-gradient(135deg, rgba(45,212,191,.18), rgba(96,165,250,.12));
+  border: 1px solid rgba(30,144,255,.22);
+
   font-weight: 850;
   color: rgba(47,47,58,.86);
   white-space: nowrap;
@@ -782,14 +757,15 @@ input:focus, textarea:focus{ border-color: rgba(107,124,255,.35); box-shadow: 0 
 }
 
 .pec-project:hover .pec-bubble{
-  border-color: rgba(123,92,255,.18);
+  border-color: rgba(45,212,191,.22);
 }
 
 .pec-bubble:hover{
   transform: translateY(-4px);
   box-shadow: 0 16px 40px rgba(35, 43, 78, .10);
-  border-color: rgba(123,92,255,.26);
+  border-color: rgba(43, 144, 245, 0.63);
 }
+
 
 .pec-box-title{
   font-weight: 950;
@@ -815,11 +791,12 @@ input:focus, textarea:focus{ border-color: rgba(107,124,255,.35); box-shadow: 0 
 
 .pec-bubble-highlight{
   background:
-    radial-gradient(300px 160px at 10% 0%, rgba(255,224,244,.65), transparent 55%),
-    radial-gradient(260px 140px at 90% 10%, rgba(123,92,255,.22), transparent 55%),
+    radial-gradient(300px 160px at 10% 0%, rgba(45,212,191,.18), transparent 55%),
+    radial-gradient(260px 140px at 90% 10%, rgba(30,144,255,.18), transparent 55%),
     rgba(255,255,255,.62);
-  border-color: rgba(123,92,255,.22);
+  border-color: rgba(30,144,255,.22);
 }
+
 
 
 /* Personal cards */
